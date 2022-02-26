@@ -28,6 +28,7 @@ Route::get('/show-post/{id}/{slug}','show');
 // Route::get('/saran/saran','saran')->middleware(['auth']);
 });
 
+// route saran
 Route::get('/saran', [SaranController::class, 'saran']);
 
 // route user
