@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
-return abort(404);
+
 
 class RegisteredUserController extends Controller
 {
@@ -22,7 +22,8 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        return abort(404);
+        // return view('auth.register');
     }
 
     /**
