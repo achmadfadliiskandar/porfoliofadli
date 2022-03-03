@@ -37,7 +37,7 @@
                     <td>{{$welcome->email}}</td>
                     <td>{{$welcome->pesan}}</td>
                     @empty
-                        <td class="bg-dark text-center text-light" colspan="4">Tidak Ada Blog</td>
+                        <td class="bg-dark text-center text-light" colspan="4">Tidak Ada Saran</td>
                     @endforelse
                     </tr>
                     </tbody>

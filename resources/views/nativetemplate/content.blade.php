@@ -10,9 +10,11 @@
 
 </head>
 <body>
+    @include('nativetemplate.navbar')
     <div class="container">
         @yield('content')
     </div>
+    @include('nativetemplate.footer')
 
     <!-- Optional JavaScript; choose one of the two! -->
 

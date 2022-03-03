@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
+return abort(404);
+
 class RegisteredUserController extends Controller
 {
     /**

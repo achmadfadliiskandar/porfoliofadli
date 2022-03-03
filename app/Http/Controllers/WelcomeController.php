@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Welcome;
 use App\Models\Post;
+use App\Models\Reply;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class WelcomeController extends Controller
 {
@@ -31,6 +34,44 @@ class WelcomeController extends Controller
     public function show($id){
         $posts = Post::find($id);
         $post = Post::all();
-        return view('show',compact('posts','post'));
+        $users = User::all();
+        $replies = Reply::where('posts_id',$id)->get();
+        return view('show',compact('posts','post','users','replies'));
+    }
+    public function tambahreplies(Request $request){
+        // dd($request->all());
+        $request->validate([
+            'pesan' => 'required',
+            // 'body' => 'required',
+        ]);
+        $reply = new Reply();
+        $reply->id = $request->id;
+        $reply->posts_id = $request->posts_id;
+        $reply->reply = $request->reply;
+        $reply->website = $request->website;
+        $reply->pesan = $request->pesan;
+        $reply->user_id = Auth::id();
+        $reply->save();
+
+        return redirect()->back()->with('status','Komentar Berhasil Di Tambahkan');
+    }
+    public function updatereplies(Request $request,$id){
+        $request->validate([
+            'pesan' => 'required',
+            // 'body' => 'required',
+        ]);
+        $reply = Reply::find($id);
+        $reply->id = $request->id;
+        $reply->posts_id = $request->posts_id;
+        $reply->reply = $request->reply;
+        $reply->website = $request->website;
+        $reply->pesan = $request->pesan;
+        $reply->user_id = Auth::id();
+        $reply->save();
+        return redirect()->back()->with('status','Reply Berhasil Di Edit');
+    }
+    public function hapusreplies($id){
+        Reply::destroy($id);
+        return redirect()->back()->with('status','Komentar Berhasil Di hapus');
     }
 }

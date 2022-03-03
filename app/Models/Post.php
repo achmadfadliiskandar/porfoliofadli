@@ -12,4 +12,9 @@ class Post extends Model
     protected $table = 'posts';
 
     protected $fillable = ['nama','slug','image','isi'];
+
+    public function reply()
+    {
+        return $this->hasOne(Reply::class);
+    }
 }

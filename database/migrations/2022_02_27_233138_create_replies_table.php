@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('replies', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('role',['admin','pengomentar'])->default('pengomentar');
-            $table->rememberToken();
+            $table->integer('posts_id');
+            $table->string('reply')->nullable();
+            $table->string('website')->nullable();
+            $table->longText('pesan');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('replies');
     }
 };

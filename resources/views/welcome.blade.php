@@ -18,9 +18,27 @@
         html{
             scroll-behavior: smooth;
         }
+        body {
+            position: relative; 
+        }
+        ::-webkit-scrollbar{
+            width: 20px;
+        }
+        ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px #FF7F00; 
+        }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: #FF7F00; 
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: #FF7F00; 
+        }
     </style>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
     {{-- begin :navbar  --}}
     @include('nativetemplate.navbar')
     {{-- end :navbar --}}
@@ -163,7 +181,7 @@
     {{-- end:blog --}}
 
     {{-- begin: contact --}}
-    <section class="contact" style="background-color: #FFBC80;" id="contact">
+    <section class="contact pt-5 pb-5" style="background-color: #FFBC80;" id="contact">
         <div class="container">
             <h2 class="text-center pt-3">Contact Me</h2>
         <p class="text-center">Silahkan kirim saran</p>
@@ -192,6 +210,11 @@
         </div>
         </div>
         <div class="col-sm-6">
+            @if ($errors->any())
+                <script>
+                    alert("data belum tersimpan");
+                </script>
+            @endif
             <form action="/welcome/store" method="POST">
                 @csrf
             <div class="mb-3">
