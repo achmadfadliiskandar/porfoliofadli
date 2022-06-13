@@ -14,6 +14,15 @@
     @include('nativetemplate.navbar')
     <div class="container mt-5 pt-5 pb-5 mb-5">
         <h2>Silahkan Login</h2>
+        {{-- php --}}
+        @if (empty(Auth::user()->name))
+        <div class="alert alert-success">Welcome</div>
+        @else
+        <script>
+            alert("anda sudah login",window.location.assign("/"))
+        </script>
+        @endif
+        {{-- end php --}}
         <div class="card mt-5 mb-5" style="width: 100%;">
         <div class="card-header" style="background-color: #FF9F45;">
             Login User
@@ -51,17 +60,7 @@
     </div>
     @include('nativetemplate.footer')
 
-    {{-- php --}}
-    @if (empty(Auth::user()->name))
-        <script>
-            alert("selamat datang")
-        </script>
-    @else
-    <script>
-        alert("anda sudah login",window.location.assign("/"))
-    </script>
-    @endif
-    {{-- end php --}}
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
