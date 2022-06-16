@@ -16,6 +16,7 @@ class WelcomeController extends Controller
         return view('welcome',compact('posts'));
     }
     public function tambah(Request $request){
+        date_default_timezone_set('Asia/Jakarta');
         $request->validate([
             'name' => 'required',
             'email' => 'email|required',
@@ -39,6 +40,7 @@ class WelcomeController extends Controller
         return view('show',compact('posts','post','users','replies'));
     }
     public function tambahreplies(Request $request){
+        date_default_timezone_set('Asia/Jakarta');
         // dd($request->all());
         $request->validate([
             'pesan' => 'required',
@@ -51,11 +53,13 @@ class WelcomeController extends Controller
         $reply->website = $request->website;
         $reply->pesan = $request->pesan;
         $reply->user_id = Auth::id();
+        // $reply->guest = str_pad('guest_', STR_PAD_LEFT).rand(1000, 999999);
         $reply->save();
 
         return redirect()->back()->with('status','Komentar Berhasil Di Tambahkan');
     }
     public function updatereplies(Request $request,$id){
+        date_default_timezone_set('Asia/Jakarta');
         $request->validate([
             'pesan' => 'required',
             // 'body' => 'required',

@@ -39,6 +39,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        date_default_timezone_set('Asia/Jakarta');
         $request->validate([
             'nama' => 'required|unique:posts|max:255',
             'slug' => 'required|unique:posts',
@@ -90,6 +91,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
+        date_default_timezone_set('Asia/Jakarta');
         $blog = Post::find($id);
         $blog->nama = $request->nama;
         $blog->isi = $request->isi;
