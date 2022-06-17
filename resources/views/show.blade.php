@@ -83,10 +83,10 @@
                                     @else
                                     <p>Reply For : {{$reply->reply}}</p>
                                     @endif
+                                    @if(!empty(Auth::user()->name))
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         Reply Cepat
                                     </button>
-                                    @if(!empty(Auth::user()->name))
                                     @if (Auth::user()->name == $reply->user->name)
                                     {{-- <p>tidak bisa</p> --}}
                                     <button class="btn btn-success my-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
