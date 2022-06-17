@@ -11,7 +11,8 @@
     <title>Register User</title>
 </head>
 <body>
-    @include('nativetemplate.navbar')
+    @include('nativetemplate.navbarblog')
+    {{-- @include('nativetemplate.navbar') --}}
     <div class="container mt-5 pt-5 pb-5 mb-5">
         <h2>Silahkan Register</h2>
         {{-- php --}}

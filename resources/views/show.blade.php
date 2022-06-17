@@ -1,4 +1,4 @@
-@extends('nativetemplate.content')
+@include('nativetemplate.navbarblog')
 <title>{{$posts->nama}}</title>
 <div class="container pt-4 pb-4 mt-4 mb-4">
     <div class="row pt-4 pb-4 mt-4 mb-4">
@@ -241,3 +241,4 @@
         </div>
     </div>
 </div>
+@include('nativetemplate.footer')
