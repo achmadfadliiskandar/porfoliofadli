@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SaranController;
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -49,5 +50,8 @@ Route::get('/dashboard', function () {
 
 // route blog
 Route::resource('blog', PostController::class)->middleware(['auth'])->middleware(['checkRole:admin']);
+
+// route tag
+Route::resource('tags', TagController::class)->middleware(['auth'])->middleware(['checkRole:admin']);
 
 require __DIR__.'/auth.php';
