@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Welcome;
 use App\Models\Post;
 use App\Models\Reply;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -36,6 +37,7 @@ class WelcomeController extends Controller
         $posts = Post::find($id);
         $post = Post::all();
         $users = User::all();
+        // $tags = Tag::all();
         $replies = Reply::where('posts_id',$id)->get();
         return view('show',compact('posts','post','users','replies'));
     }

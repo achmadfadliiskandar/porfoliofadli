@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Http\Controllers\Controller;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
@@ -28,7 +29,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('blog.create');
+        $tags = Tag::all();
+        return view('blog.create',compact('tags'));
     }
 
     /**
@@ -57,6 +59,7 @@ class PostController extends Controller
             $blog->image = $filename;
         }
         $blog->save();
+        $blog->tags()->attach($request->input('tag_id'));
         return redirect('blog')->with('status','Blog Berhasil ditambah');
     }
 

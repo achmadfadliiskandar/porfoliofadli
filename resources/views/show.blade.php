@@ -211,6 +211,7 @@
                 </div>
             </div>
         <div class="col-sm-4">
+            <h2 style="text-transform: capitalize;">judul blog</h2>
             <table class="table table-bordered">
                 <thead>
                 <tr>
@@ -237,6 +238,18 @@
                     </tr>
                 </tbody>
             </table>
+            <section id="tags" class="tags">
+                        <h2>Tags</h2>
+                        <div class="card">
+                            <div class="card-body">
+                                @forelse($posts->tags as $tag)
+                                    <button class="btn btn-primary mt-2 mb-2">{{$tag->tag_name}}</button>
+                                @empty
+                                    <button class="btn btn-danger">Tidak ada Tag</button>
+                                @endforelse
+                            </div>
+                        </div>
+                    </section>
             <a href="/" class="my-3 btn btn-danger w-100">Back</a>
         </div>
     </div>

@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- Select Picker -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     <title>Tambah Blog</title>
 </head>
 <body>
@@ -41,6 +44,14 @@
                         <input class="form-control border border-dark" type="file" id="formFile" name="image">
                     </div>
                     <div class="mb-3">
+                        <label for="tags_id">Pilih Tag</label>
+                        <select class="js-example-basic-multiple form-control" name="tag_id[]" multiple="multiple">
+                            @foreach ($tags as $tag)
+                                <option value="{{$tag->id}}">{{$tag->tag_name}}</option>
+                            @endforeach
+                        </select>                       
+                    </div>
+                    <div class="mb-3">
                         <label for="isi">Content</label>
                         <textarea class="form-control @error('isi') is-invalid @enderror" id="isi" name="isi"></textarea>
                         @error('isi')
@@ -54,8 +65,9 @@
     </x-app-layout>    
 
     <!-- Optional JavaScript; choose one of the two! -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.10.3/tinymce.min.js" integrity="sha512-ykwx/3dGct2v2AKqqaDCHLt1QFVzdcpad7P5LfgpqY8PJCRqAqOeD4Bj63TKnSQy4Yok/6QiCHiSV/kPdxB7AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script type='text/javascript'> 
         tinymce.init({ 
@@ -75,6 +87,9 @@
         document.getElementById("slug").value = str;
         //return str;
         }
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2();
+        });
     </script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
