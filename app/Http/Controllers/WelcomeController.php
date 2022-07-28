@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Guest;
 use Illuminate\Http\Request;
 use App\Models\Welcome;
 use App\Models\Post;
@@ -37,9 +38,28 @@ class WelcomeController extends Controller
         $posts = Post::find($id);
         $post = Post::all();
         $users = User::all();
+        $guests = Guest::where('posts_id',$id)->get();
         // $tags = Tag::all();
-        $replies = Reply::where('posts_id',$id)->get();
-        return view('show',compact('posts','post','users','replies'));
+        $replies = Reply::all();
+        return view('show',compact('posts','post','users','replies','guests'));
+    }
+    public function tambahguest(Request $request){
+        date_default_timezone_set('Asia/Jakarta');
+        // dd($request->all());
+        $request->validate([
+            'pesan' => 'required',
+            // 'body' => 'required',
+        ]);
+        // dd($request->all());
+        $reply = new Guest();
+        $reply->id = $request->id;
+        $reply->posts_id = $request->posts_id;
+        $reply->reply = $request->reply;
+        $reply->website = $request->website;
+        $reply->pesan = $request->pesan;
+        $reply->guest = str_pad('guest_', STR_PAD_LEFT).rand(1000, 999999);
+        $reply->save();
+        return redirect()->back()->with('status','Komentar Berhasil Di Tambahkan');
     }
     public function tambahreplies(Request $request){
         date_default_timezone_set('Asia/Jakarta');
@@ -57,7 +77,6 @@ class WelcomeController extends Controller
         $reply->user_id = Auth::id();
         // $reply->guest = str_pad('guest_', STR_PAD_LEFT).rand(1000, 999999);
         $reply->save();
-
         return redirect()->back()->with('status','Komentar Berhasil Di Tambahkan');
     }
     public function updatereplies(Request $request,$id){

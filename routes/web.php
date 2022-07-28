@@ -29,6 +29,7 @@ Route::get('/show-post/{id}/{slug}','show');
 Route::post('/replies/tambahreplies','tambahreplies');
 Route::put('/replies/update/{id}','updatereplies');
 Route::delete('/replies/hapus/{id}','hapusreplies');
+Route::post('/guests/tambahguest','tambahguest');
 // Route::get('/saran/saran','saran')->middleware(['auth']);
 });
 
