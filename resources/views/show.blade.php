@@ -108,6 +108,7 @@
                         <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Komentar Tanpa Akun</button>
                         </li>
                     </ul>
+                    {{-- bagian yang punya login --}}
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                             <div class="row" style="overflow-y:auto;">
@@ -201,6 +202,7 @@
                                 </div>
                             </div>
                         </div>
+                        {{-- bagian yang tidak punya login alias guest --}}
                         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                             <div class="row" style="overflow-y:auto;">
                                 <div class="col-sm-12">
