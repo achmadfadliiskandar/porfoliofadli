@@ -40,7 +40,7 @@ class WelcomeController extends Controller
         $users = User::all();
         $guests = Guest::where('posts_id',$id)->get();
         // $tags = Tag::all();
-        $replies = Reply::all();
+        $replies = Reply::where('posts_id',$id)->get();
         return view('show',compact('posts','post','users','replies','guests'));
     }
     public function tambahguest(Request $request){

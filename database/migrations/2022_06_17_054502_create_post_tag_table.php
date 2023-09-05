@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('post_tag', function (Blueprint $table) {
             $table->id();
             $table->integer('post_id')->nullable();
-            $table->integer('tags_id')->nullable();
+            $table->integer('tag_id')->nullable();
             $table->timestamps();
         });
     }
