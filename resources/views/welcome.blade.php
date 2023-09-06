@@ -70,24 +70,38 @@
                 <strong>Latar Belakang : </strong>
                 <hr>
                 <p>
-                    Assalamualaikum wr wb nama saya achmad fadli iskandar saya dari depok dan saya lahir 17 september 2003 saya adalah seorang programmer web / web developer junior dan sekarang saya sedang bersekolah di <strong class="text-uppercase">smk taruna bhakti</strong> depok dan saya adalah orang yang senang/suka dengan pemrograman / programming contoh c php javascript python html css karena menurut saya bahasanya sangat bagus dan juga saya memiliki hobi seperti programming sepak bola bulu tangkis tenis meja dan basket
+                    Assalamualaikum wr wb nama saya achmad fadli iskandar saya dari depok dan saya lahir 17 september 2003 saya adalah seorang programmer web / web developer junior dan sekarang saya sedang bersekolah di <strong class="text-uppercase">smk taruna bhakti</strong> depok dan saya adalah orang yang senang/suka dengan pemrograman / programming contoh c php javascript python html css karena menurut saya bahasanya sangat bagus karena memiliki sintaksis dan semantik yang dapat dimengerti oleh manusia, dan juga saya memiliki hobi seperti programming sepak bola bulu tangkis tenis meja dan basket saat ini saya sedang mengikuti perkuliahan di salah satu universitas swasta di kota depok yaitu <b>Gunadarma</b> , Saya mengambil prodi Informatika Didalam Informatika Saya Mempelajari Seperti Algoritma Dan Pemrograman Dan pengenalan teknologi komputer informasi dan legal aspek produk dan komunikasi
                 </p>
             </div>
             <div class="col-sm-6">
                 <strong>Pengalaman : </strong>
                 <hr>
-                <div class="card" style="width: 100%;">
-                    <div class="card-header">
-                    Penghargaan / prestasi yang di dapatkan
-                    </div>
-                    <ol class="list-group list-group-numbered">
-                        <li class="list-group-item">Sertifikat Free Code Camp : <strong>HTML</strong> <span class="badge bg-primary rounded-pill">1</span></li>
-                        <li class="list-group-item">Sertifikat Solo Learn :  <strong>PHP,HTML,JS,JQUERY,SQL,CODING FOR MARKETERS,CSS,RESPONSIVE WEB DESIGN</strong> <span class="badge bg-primary rounded-pill">8</span></li>
-                        <li class="list-group-item">Kunjungan Industri (KUNJIN) Ke PT Frisidea Tech</li>
-                    </ol>
-                    </ul>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">1.Mengikuti Seminar Dan Webinar BALANCING YOUR SKILL (BYS) 2023 Kampus Gunadarma D</li>
+                    <li class="list-group-item">2.Mengikuti Seminar Peran LSP dalam dunia kerja berbasis kompetensi di era revolusi 4.0 dan society 5.0 Online</li>
+                    <li class="list-group-item">3.Menyelesaikan Praktikum Fisika Dasar Kampus Gunadarma H</li>
+                    <li class="list-group-item">4.Menyelesaikan Praktikum LAB-TI Kampus Gunadarma E</li>
+                    <li class="list-group-item">5.Pernah Magang Di PT Indorental Selama 1.5 Bulan (online) Dan PT B-ONE CORP Selama 4 Bulan (offline)</li>
+                    <li class="list-group-item">6.Pernah Mendampingi Salah Satu Pemain Bulu Tangkis Di Kejuaraan Kota jaksel (kejurkot | pasar minggu)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <h2 class="text-capitalize">Prestasi</h2>
+            <hr>
+            <div class="card" style="width: 100%;">
+                <div class="card-header">
+                Penghargaan / prestasi yang di dapatkan
                 </div>
-                <a href="{{asset('Cahaya Dewi.pdf')}}" class="btn btn-secondary my-3" target="_blank">Lihat CV Saya</a>
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item">Sertifikat Free Code Camp : <strong>HTML</strong> <span class="badge bg-primary rounded-pill">1</span></li>
+                    <li class="list-group-item">Sertifikat Solo Learn :  <strong>PHP,HTML,JS,JQUERY,SQL,CODING FOR MARKETERS,CSS,RESPONSIVE WEB DESIGN</strong> <span class="badge bg-primary rounded-pill">8</span></li>
+                    <li class="list-group-item">Kunjungan Industri (KUNJIN) Ke PT Frisidea Tech</li>
+                    <li class="list-group-item">Finalis Himti cup 2023 Cabor Badminton</li>
+                    <li class="list-group-item">Juara ITSOCIART FEST 2023 Cabor Badminton</li>
+                    <li class="list-group-item">Juara 2 WebXperience Design Challenge 2023 Coding Bagian Desain Web</li>
+                </ol>
+                </ul>
             </div>
         </div>
     </div>
@@ -95,62 +109,32 @@
     {{-- end : about --}}
 
     {{-- begin : skill --}}
-    <section class="service bg-light mt-5 mb-5 pt-5 pb-5" id="service">
-        <h2 class="text-center pt-3 pb-3">Service</h2>
+    <section class="kemampuan bg-light mt-5 mb-5 pt-5 pb-5" id="kemampuan">
+        <h2 class="text-center pt-3 pb-3">Kemampuan</h2>
         <div class="container text-center">
             <div class="row">
                 {{-- gambar 1 --}}
                 <div class="col-md-4">
-                    <div class="card mt-3 mb-3" style="width: 100%;">
-                        <img src="{{asset('html.jpg')}}" class="card-img-top" alt="coding">
-                        <div class="card-body">
-                        <h5 class="card-title">Front End Developer</h5>
-                        <div class="collapse" id="collapseExample">
-                            <div class="card card-body">
-                            Saya Mampu Membuat Halaman Tampilan Website Dengan HTML JavaScript Dan Css Dan Juga Menggunakan Framework Seperti Boostrap Dan Jquery dan lain2
-                            </div>
-                        </div>
-                        <button class="btn btn-primary w-100 mt-3 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                            Lihat Deskripsi
-                        </button>
-                        </div>
-                    </div>
+                    <img src="https://cdn-cdpl.sgp1.cdn.digitaloceanspaces.com/source/4817b4477491b436a2a3cb4db5f3943b/header-python-logo-flat-image700x350-crop-image700x350-crop-image(700x350-crop).png" class="card-img-top" style="width:100%;" alt="coding">
+                    <br>
+                    <br>
+                    <img src="https://static.blog.ruangdeveloper.com/2021/12/mengenal-framework-laravel.png" class="card-img-top" style="width: 100%;" alt="">
                 </div>
                 {{-- end gambar 1 --}}
                 {{-- gambar 2 --}}
                 <div class="col-md-4">
-                    <div class="card mt-3 mb-3" style="width: 100%;">
-                        <img src="{{asset('design.png')}}" class="card-img-top" style="height: 200px;" alt="design">
-                        <div class="card-body">
-                        <h5 class="card-title">Web Design</h5>
-                        <div class="collapse" id="collapseExamples">
-                            <div class="card card-body">
-                                Saya Mampu Membuat Halaman Tampilan Design Dengan Menggunakan Figma dan AdobeXd Dan Bisa mendesain Poster Dengan Adobe Photoshop
-                            </div>
-                        </div>
-                        <button class="btn btn-primary w-100 mt-3 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExamples" aria-expanded="false" aria-controls="collapseExample">
-                            Lihat Deskripsi
-                        </button>
-                        </div>
-                    </div>
+                    <img src="https://delapanmedia.com/asset/berita/original/77723555319-bd2_6f5_636_330-1-original.jpg" class="card-img-top" style="width:100%;" alt="design">
+                    <br>
+                    <br>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1200px-Flask_logo.svg.png" class="card-img-top" style="width: 100%;" alt="">
                 </div>
                 {{-- end gambar 2 --}}
                 {{-- gambar 3 --}}
                 <div class="col-md-4">
-                    <div class="card mt-3 mb-3" style="width: 100%;">
-                        <img src="{{asset('coding.jpg')}}" class="card-img-top" style="height: 200px;" alt="backend">
-                        <div class="card-body">
-                        <h5 class="card-title">Back End Developer</h5>
-                        <div class="collapse" id="collapseExam">
-                            <div class="card card-body">
-                                Saya Mampu Membuat Web Yang Baik Secara Tampilan Dan Juga Terhubung Dengan Database Menggunakan Laravel Dan PHP
-                            </div>
-                        </div>
-                        <button class="btn btn-primary w-100 mt-3 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExam" aria-expanded="false" aria-controls="collapseExample">
-                            Lihat Deskripsi
-                        </button>
-                        </div>
-                    </div>
+                    <img src="https://it.telkomuniversity.ac.id/bemucil/2023/01/Javascript-adalah-1.jpg" class="card-img-top" style="width:100%;" alt="backend">
+                    <br>
+                    <br>
+                    <img src="https://tms-outsource.com/blog/wp-content/uploads/2023/05/bootstrap-alternatives.jpg" class="card-img-top" style="width:100%;" alt="">
                 </div>
                 {{-- end gambar 3 --}}
             </div>
@@ -254,7 +238,7 @@
         // alert("testing dlu")
         $(document).ready(function(){
             var typed = new Typed(".typing",{
-            strings:["Junior Programmer","Atlit Badminton","Youtuber","Blogger","Designer"],
+            strings:["Junior Programmer","Atlit Badminton","Youtuber","Blogger","Designer","Mahasiswa"],
             typeSpeed:100,
             backSpeed:60,
             loop:true

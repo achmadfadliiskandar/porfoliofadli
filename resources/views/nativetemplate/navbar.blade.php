@@ -12,7 +12,7 @@
             <a class="nav-link" aria-current="page" href="/#about">About</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/#service">Service</a>
+            <a class="nav-link" href="/#kemampuan">Kemampuan</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/#blog">Blog</a>
