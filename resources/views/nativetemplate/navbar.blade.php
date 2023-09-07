@@ -29,25 +29,20 @@
                         <a href="/registeruser" class="nav-link">Register</a>
                     </li>
                 @else
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{Auth::user()->name}}
-                </a>
-                <ul class="dropdown-menu bg-danger" aria-labelledby="navbarDropdown">
-                    <li>
-                        <form method="POST" action="{{ route('logout') }}" onsubmit="return confirm('yakin ingin logout?')">
-                            @csrf
+                <li class="nav-item">
+                    <form method="POST" action="{{ route('logout') }}" onsubmit="return confirm('yakin ingin logout?')">
+                        @csrf
 
-                            {{-- <a class="text-danger text-decoration-none text-center" href="route('logout')"
-                                    onclick="event.preventDefault();
-                                    this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </a> --}}
-                            <div class="d-grid gap-2">
-                            <button class="btn btn-danger btn btn-block">Log Out</button>
-                            </div>
-                        </form>
-                    </li>
-                </ul>
+                        {{-- <a class="text-danger text-decoration-none text-center" href="route('logout')"
+                                onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </a> --}}
+                        <div class="d-grid gap-2">
+                        <button class="btn btn-danger btn btn-block">{{Auth::user()->name}} || Log Out</button>
+                        </div>
+                    </form>
+                </li>
                 @endif
             </li>
         </ul>

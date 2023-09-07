@@ -70,7 +70,7 @@
                 <strong>Latar Belakang : </strong>
                 <hr>
                 <p>
-                    Assalamualaikum wr wb nama saya achmad fadli iskandar saya dari depok dan saya lahir 17 september 2003 saya adalah seorang programmer web / web developer junior dan sekarang saya sedang bersekolah di <strong class="text-uppercase">smk taruna bhakti</strong> depok dan saya adalah orang yang senang/suka dengan pemrograman / programming contoh c php javascript python html css karena menurut saya bahasanya sangat bagus karena memiliki sintaksis dan semantik yang dapat dimengerti oleh manusia, dan juga saya memiliki hobi seperti programming sepak bola bulu tangkis tenis meja dan basket saat ini saya sedang mengikuti perkuliahan di salah satu universitas swasta di kota depok yaitu <b>Gunadarma</b> , Saya mengambil prodi Informatika Didalam Informatika Saya Mempelajari Seperti Algoritma Dan Pemrograman Dan pengenalan teknologi komputer informasi dan legal aspek produk dan komunikasi
+                    Assalamualaikum wr wb nama saya achmad fadli iskandar saya dari depok dan saya lahir 17 september 2003 saya adalah seorang programmer web / web developer junior dan sekarang saya sedang bersekolah di <strong class="text-uppercase">smk taruna bhakti</strong> depok dan saya adalah orang yang senang/suka dengan pemrograman / programming contoh c php javascript python html css karena menurut saya bahasanya sangat bagus karena memiliki sintaksis dan semantik yang dapat dimengerti oleh manusia, dan juga saya memiliki hobi seperti programming sepak bola bulu tangkis tenis meja dan basket setelah lulus dari smk taruna bhakti saya melanjutkan belajar/menimba ilmu di salah satu universitas swasta di kota depok yaitu <b>Gunadarma</b> , Saya mengambil prodi Informatika Didalam Informatika Saya Mempelajari Seperti Algoritma Dan Pemrograman Dan pengenalan teknologi komputer informasi dan legal aspek produk dan komunikasi
                 </p>
             </div>
             <div class="col-sm-6">
@@ -97,7 +97,7 @@
                     <li class="list-group-item">Sertifikat Free Code Camp : <strong>HTML</strong> <span class="badge bg-primary rounded-pill">1</span></li>
                     <li class="list-group-item">Sertifikat Solo Learn :  <strong>PHP,HTML,JS,JQUERY,SQL,CODING FOR MARKETERS,CSS,RESPONSIVE WEB DESIGN</strong> <span class="badge bg-primary rounded-pill">8</span></li>
                     <li class="list-group-item">Kunjungan Industri (KUNJIN) Ke PT Frisidea Tech</li>
-                    <li class="list-group-item">Finalis Himti cup 2023 Cabor Badminton</li>
+                    <li class="list-group-item">Finalis Himti cup 2023 Cabor Badminton Reg DPK-CGK</li>
                     <li class="list-group-item">Juara ITSOCIART FEST 2023 Cabor Badminton</li>
                     <li class="list-group-item">Juara 2 WebXperience Design Challenge 2023 Coding Bagian Desain Web</li>
                 </ol>

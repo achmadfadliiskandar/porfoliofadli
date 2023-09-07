@@ -61,6 +61,24 @@ class WelcomeController extends Controller
         $reply->save();
         return redirect()->back()->with('status','Komentar Berhasil Di Tambahkan');
     }
+    public function replyadmin(Request $request){
+        date_default_timezone_set('Asia/Jakarta');
+        // dd($request->all());
+        $request->validate([
+            'pesan' => 'required',
+            // 'body' => 'required',
+        ]);
+        // dd($request->all());
+        $reply = new Guest();
+        $reply->id = $request->id;
+        $reply->posts_id = $request->posts_id;
+        $reply->reply = $request->reply;
+        $reply->website = $request->website;
+        $reply->pesan = $request->pesan;
+        $reply->guest = Auth::user()->role;
+        $reply->save();
+        return redirect()->back()->with('status','Komentar Berhasil Di Tambahkan');
+    }
     public function tambahreplies(Request $request){
         date_default_timezone_set('Asia/Jakarta');
         // dd($request->all());

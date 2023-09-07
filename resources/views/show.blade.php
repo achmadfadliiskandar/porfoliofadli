@@ -137,6 +137,7 @@
                                                 <p class="text-danger">Tidak ada Reply</p>
                                             @else
                                             <p>Reply For : {{$reply->reply}}</p>
+                                            <p>Waktu Komentar : {{$reply->created_at}}</p>
                                             @endif
                                             @if(!empty(Auth::user()->name))
                                             @if (Auth::user()->name == $reply->user->name)
@@ -212,6 +213,62 @@
                                         1.Pesan Tidak Dapat Diubah Dan Dihapus
                                         <br>
                                         2.Otomatis Reply
+                                        <br>
+                                        @auth
+                                        @if (Auth::user()->role == "admin")
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            Admin Komentar Disini
+                                        </button>
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Reply Komentar Admin</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="/admin/guests/reply" method="POST" onsubmit="return confirm('pastikan anda yakin karena pesan yang dikirim tidak bisa dihapus')">
+                                                            @csrf
+                                                            @if ($errors->any())
+                                                                <script>
+                                                                    alert("data belum tersimpan");
+                                                                </script>
+                                                            @endif
+                                                        <div class="mb-3">
+                                                                <label for="posts_id" class="form-label">Judul Diskusi / Blog</label>
+                                                                {{-- <input type="text" class="form-control" id="posts_id" readonly name="posts_id" value="{{$posts->nama}}"> --}}
+                                                                <select name="posts_id" id="posts_id" class="form-control">
+                                                                <option value="{{$posts->id}}">{{$posts->slug}}</option>
+                                                                </select>
+                                                        </div>
+                                                        <label for="website" class="form-label">Website</label>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text" id="basic-addon3">https://youtube.com</span>
+                                                            <input type="text" class="form-control" id="basic-url" name="website" placeholder="https://youtube.com">
+                                                        </div>
+                                                        <div class="mb-3">Reply To</div>
+                                                        <select class="form-control" id="reply" name="reply">
+                                                                @foreach ($guests as $guest)
+                                                                <option>{{$guest->guest}}</option>
+                                                                @endforeach
+                                                        </select>
+                                                        <div class="mb-3">
+                                                            <label for="pesan" class="form-label @error('pesan') is-invalid @enderror">Pesan</label>
+                                                            <textarea class="form-control" placeholder="Leave a comment here" id="pesan" name="pesan"></textarea>
+                                                            @error('pesan')
+                                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                                                    </form>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        @endif
+                                        @endauth
                                     </div>
                                     <div class="card mt-3 mb-3">
                                         <div class="card-body text-justify">

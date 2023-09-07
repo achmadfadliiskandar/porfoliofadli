@@ -30,6 +30,7 @@ Route::post('/replies/tambahreplies','tambahreplies');
 Route::put('/replies/update/{id}','updatereplies');
 Route::delete('/replies/hapus/{id}','hapusreplies');
 Route::post('/guests/tambahguest','tambahguest');
+Route::post('/admin/guests/reply','replyadmin');
 // Route::get('/saran/saran','saran')->middleware(['auth']);
 });
 
