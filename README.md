@@ -1,2 +1,2 @@
 # porfoliofadli
-khusus portfolio yang mau di hosting ke domain nesia
+belajar membuat portfolio dengan laravel
